@@ -1,2 +1,3 @@
-# faststore-latamlab03
-Powered by FastStore
+# starter.store
+
+A starter store powered by FastStore!
