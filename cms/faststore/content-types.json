@@ -1,0 +1,136 @@
+[
+  {
+    "id": "landingPage",
+    "name": "Landing Page",
+    "configurationSchemaSets": [
+      {
+        "name": "Settings",
+        "configurations": [
+          {
+            "name": "seo",
+            "schema": {
+              "title": "SEO",
+              "description": "Search Engine Optimization options",
+              "type": "object",
+              "widget": {
+                "ui:ObjectFieldTemplate": "GoogleSeoPreview"
+              },
+              "required": ["slug", "title", "description"],
+              "properties": {
+                "slug": {
+                  "title": "Path",
+                  "type": "string",
+                  "default": "/"
+                },
+                "title": {
+                  "title": "Default page title",
+                  "description": "Display this title when no other title is available",
+                  "type": "string",
+                  "default": "FastStore Starter"
+                },
+                "description": {
+                  "title": "Meta tag description",
+                  "type": "string",
+                  "default": "A beautifully designed store"
+                },
+                "canonical": {
+                  "title": "Canonical url for the page",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HelloWorld",
+    "requiredScopes": ["global", "landing"],
+    "schema": {
+      "title": "Hello World",
+      "description": "Sección mínima para pruebas",
+      "type": "object",
+      "required": ["title", "text"],
+      "properties": {
+        "title": {
+          "title": "Título",
+          "type": "string"
+        },
+        "text": {
+          "title": "Texto",
+          "type": "string"
+        }
+      }
+    }
+  },
+  {
+    "name": "CustomHeader",
+    "requiredScopes": ["global"],
+    "schema": {
+      "title": "Custom Header",
+      "description": "Header propio con logo, search, login, CTA, minicart y links",
+      "type": "object",
+      "required": [
+        "logoText",
+        "searchPlaceholder",
+        "loginLabel",
+        "actionLabel",
+        "minicartLabel"
+      ],
+      "properties": {
+        "logoText": {
+          "title": "Logo Text",
+          "type": "string",
+          "default": "Brandless"
+        },
+        "searchPlaceholder": {
+          "title": "Search Placeholder",
+          "type": "string",
+          "default": "Search everything in the store"
+        },
+        "loginLabel": {
+          "title": "Login Label",
+          "type": "string",
+          "default": "Sign in"
+        },
+        "icon": {
+          "title": "Login Icon",
+          "type": "string",
+          "enum": ["User", "Heart", "Bell"],
+          "enumNames": ["User", "Heart", "Bell"],
+          "default": "User"
+        },
+        "actionLabel": {
+          "title": "Action Button Label",
+          "type": "string",
+          "default": "Benefits"
+        },
+        "minicartLabel": {
+          "title": "Minicart Label",
+          "type": "string",
+          "default": "Cart"
+        },
+        "links": {
+          "title": "Bottom Links",
+          "type": "array",
+          "items": {
+            "title": "Link",
+            "type": "object",
+            "required": ["label", "href"],
+            "properties": {
+              "label": {
+                "title": "Label",
+                "type": "string"
+              },
+              "href": {
+                "title": "Href",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
