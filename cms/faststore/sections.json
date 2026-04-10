@@ -37,7 +37,6 @@
     },
     {
       "name": "HelloWorld",
-      "requiredScopes": ["global", "landing"],
       "schema": {
         "title": "Hello World",
         "description": "Sección mínima para pruebas",
@@ -57,7 +56,6 @@
     },
     {
       "name": "CustomHeader",
-      "requiredScopes": ["global"],
       "schema": {
         "title": "Custom Header",
         "description": "Header propio con logo, search, login, CTA, minicart y links",
