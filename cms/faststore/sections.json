@@ -41,7 +41,10 @@
         "title": "Hello World",
         "description": "Sección mínima para pruebas",
         "type": "object",
-        "required": ["title", "text"],
+        "required": [
+          "title",
+          "text"
+        ],
         "properties": {
           "title": {
             "title": "Título",
@@ -86,8 +89,16 @@
           "icon": {
             "title": "Login Icon",
             "type": "string",
-            "enum": ["User", "Heart", "Bell"],
-            "enumNames": ["User", "Heart", "Bell"],
+            "enum": [
+              "User",
+              "Heart",
+              "Bell"
+            ],
+            "enumNames": [
+              "User",
+              "Heart",
+              "Bell"
+            ],
             "default": "User"
           },
           "actionLabel": {
@@ -106,7 +117,10 @@
             "items": {
               "title": "Link",
               "type": "object",
-              "required": ["label", "href"],
+              "required": [
+                "label",
+                "href"
+              ],
               "properties": {
                 "label": {
                   "title": "Label",
@@ -120,6 +134,38 @@
             }
           }
         }
+      }
+    },
+    {
+      "name": "ProductShowcase",
+      "requiredScopes": [
+        "global",
+        "home",
+        "landing"
+      ],
+      "schema": {
+        "title": "Product Showcase",
+        "description": "Prueba mínima de colección",
+        "type": "object",
+        "properties": {
+          "title": {
+            "title": "Título",
+            "type": "string",
+            "default": "Productos destacados"
+          },
+          "productClusterIds": {
+            "title": "Collection ID",
+            "type": "string"
+          },
+          "first": {
+            "title": "Cantidad de productos",
+            "type": "number",
+            "default": 5
+          }
+        },
+        "required": [
+          "productClusterIds"
+        ]
       }
     }
   ]

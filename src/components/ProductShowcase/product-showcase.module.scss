@@ -1,0 +1,112 @@
+.productShowcase {
+  padding: 24px;
+}
+
+.header {
+  margin-bottom: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.imageWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: #f7f7f7;
+  border-radius: 6px;
+}
+
+.discountBadge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.imageFallback {
+  font-size: 14px;
+  color: #666;
+}
+
+.productName {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.price {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .productShowcase {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+.imageLink,
+.nameLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nameLink {
+  display: block;
+}
+
+.nameLink:hover .productName {
+  text-decoration: underline;
+}
