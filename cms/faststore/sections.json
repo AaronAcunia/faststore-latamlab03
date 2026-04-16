@@ -188,5 +188,49 @@
         "productClusterIds"
       ]
     }
+  },
+  {
+    "name": "CustomSlider",
+    "schema": {
+      "title": "Custom Slider",
+      "description": "Slider de imágenes con animación",
+      "type": "object",
+      "properties": {
+        "autoplay": {
+          "title": "Autoplay",
+          "type": "boolean",
+          "default": true
+        },
+        "interval": {
+          "title": "Interval (ms)",
+          "type": "number",
+          "default": 4000
+        },
+        "slides": {
+          "title": "Slides",
+          "type": "array",
+          "items": {
+            "title": "Slide",
+            "type": "object",
+            "required": [
+              "image"
+            ],
+            "properties": {
+              "image": {
+                "title": "Image URL",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "link": {
+                "title": "Link",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
   }
 ]
